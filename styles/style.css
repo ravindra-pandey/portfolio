@@ -1,4 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap')
+
+
+
 .css-k1ih3n{
     padding: 5%;
+    
+}
+.st-emotion-cache-776elj{
+    display: block; /* Ensure block-level display for centering */
+    margin: 0 auto; /* Center horizontally */
+    width: 35vw;
+    height: 40vw;
 
+}
+.st-emotion-cache-keje6w > div > div > div > iframe {
+    display: block; /* Ensure block-level display for centering */
+    margin: 0 auto; /* Center horizontally */
+    width: 35vw; /* Responsive width based on viewport width */
+    height: 40vw; /* Maintain aspect ratio with 1:2 width-to-height ratio */
 }

@@ -3,7 +3,7 @@ from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 import json
 
-st.set_page_config(layout="wide", page_title="Home", page_icon="🏡")
+st.set_page_config(layout="wide", page_title="Ravindra", page_icon="🏡")
 
 
 def css_loader(url):
@@ -31,18 +31,33 @@ if selected == "About":
         st.write("##")
         st.write("##")
         st.write("##")
-        st.header("I am RAVINDRA PANDEY")
-        st.title("Data Science Postgraduate")
+        st.markdown("""
+                    # I am <span style='color: #ff4b4b;font-family: "Fasthand",cursive;font-weight:1500;font-style: bold;'>RAVINDRA PANDEY</span> 
+                    ## <span style="color:#f2bebe;">Data Science Postgraduate</span>
+                    ##### <span style="color:#f2bebe;">From raw data to real solutions: Your trusted data science partner.</span> 
+                    """,unsafe_allow_html=True)
+        with open("assests/ravindra_pandey_resume.pdf","rb") as f:
+            resume=f.read()
+        downloaded=st.download_button(
+            label="My Resume ",
+            data=resume,  # Use pdf_data if available, otherwise read directly from file
+            file_name="ravindra_resume.pdf",  # Adjust filename as needed
+            mime="application/pdf",
+            )
+        if downloaded:
+            st.balloons()
+    # Code to initiate download will run when button is clicked
+
     with col2:
-        st_lottie(json.load(open("assests/animation_laptop.json", "r")))
+        st_lottie(json.load(open("assests/data_scientist.json", "r")),key="animation_container")
         pass
+    st.write("---")
+    st.markdown("""# Education""",unsafe_allow_html=True)
     st.write("---")
     col3, col4 = st.columns(2)
     with col3:
         st.markdown(
             f""" 
-                    ## Education
-                    ----------
                     ### MCA Data Science
                         ☼ Dev Sanskriti Vishwavidyalaya
                         ☼ 7.62 SGPA, 8.4 SGPA, 8.33 SGPA, _
@@ -52,6 +67,10 @@ if selected == "About":
                         ☼ Dev Sanskriti Vishwavidyalaya
                         ☼ 7.2 CGPA
                         ☼ 2019 - 2022
+            """,unsafe_allow_html=True)
+    with col4:
+        st.markdown(
+            f""" 
                     ### 12th
                         ☼ Inter Science College , Hazaribagh
                         ☼ 51.4%
@@ -63,34 +82,34 @@ if selected == "About":
                      """,
             unsafe_allow_html=True,
         )
-    with col4:
-        st.markdown(
-            """
-                    ## Work Experiences
-                    -------------------
-                    ### Machine Learning Mentor
-                    ##### National Institute of Electronics and Information Technology, Haridwar
-                        ☼ Training JNV students in Tehri Garhwal on Python and ML.
-                        
-                        ☼ Increased student engagement & practical knowledge: hands-on coding, 
-                        interactive notebooks, project simulations (data analysis, prediction models).
+    
+    st.markdown(
+    """
+            ## Work Experiences
+            -------------------
+            ### Machine Learning Mentor
+            ##### National Institute of Electronics and Information Technology, Haridwar
+                ☼ Training JNV students in Tehri Garhwal on Python and ML.
+                
+                ☼ Increased student engagement & practical knowledge: hands-on coding, 
+                interactive notebooks, project simulations (data analysis, prediction models).
 
-                        ☼ Bridged academic-real world gap: dynamically tailored curriculum.
+                ☼ Bridged academic-real world gap: dynamically tailored curriculum.
 
-                        ☼ Expanding to NLP & Deep Learning modules.
-                    ### Computer Vision Intern
-                    ##### Center of Artificial Intelligence & Research
-                        ☼ Engineered an automated Optical Character Recognition (OCR) application 
-                        utilizing Python and Google Vision API to extract data from legacy student forms,
-                        resulting in a 75% reduction in manual data entry time.
+                ☼ Expanding to NLP & Deep Learning modules.
+            ### Computer Vision Intern
+            ##### Center of Artificial Intelligence & Research
+                ☼ Engineered an automated Optical Character Recognition (OCR) application 
+                utilizing Python and Google Vision API to extract data from legacy student forms,
+                resulting in a 75% reduction in manual data entry time.
 
-                        ☼ Proactively resolved a critical text extraction issue, ensuring 97% accuracy and 
-                        completeness of data capture from diverse document formats.
-                        """,
-            unsafe_allow_html=True,
-        )
+                ☼ Proactively resolved a critical text extraction issue, ensuring 97% accuracy and 
+                completeness of data capture from diverse document formats.
+                """,
+    unsafe_allow_html=True,
+    )
 
-        st_lottie(json.load(open("assests/animation_looking_ahead.json", "r")))
+    st_lottie(json.load(open("assests/animation_looking_ahead.json", "r")))
 
 if selected == "Projects":
     st.balloons()
