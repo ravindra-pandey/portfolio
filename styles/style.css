@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap')
-.css-k1ih3n{
-    padding: 5%;
-    
-}
+
 .st-emotion-cache-776elj{
     display: block; /* Ensure block-level display for centering */
     margin: 0 auto; /* Center horizontally */
@@ -16,3 +13,16 @@
     width: 35vw; /* Responsive width based on viewport width */
     height: 40vw; /* Maintain aspect ratio with 1:2 width-to-height ratio */
 }
+.st-emotion-cache-keje6w > div > div > div > iframe {
+    display: block; /* Ensure block-level display for centering */
+    margin: 0 auto; /* Center horizontally */
+    width: 35vw; /* Responsive width based on viewport width */
+    height: 40vw; /* Maintain aspect ratio with 1:2 width-to-height ratio */
+}
+.linkedin-logo {
+    background-image: url("assests/in-Blue-21.png"); /* Base64-encoded SVG data */
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    background-repeat: no-repeat;
+    display: inline-block;
+  }

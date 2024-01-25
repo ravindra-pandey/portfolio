@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 import json
+import projects
 
 st.set_page_config(layout="wide", page_title="Ravindra", page_icon="🏡")
 
@@ -17,8 +18,8 @@ st.title("#")
 with st.container():
     selected = option_menu(
         menu_title=None,
-        options=["About", "Projects", "Contact"],
-        icons=["person", "code-slash", "chat"],
+        options=["About", "Projects"],
+        icons=["person", "code-slash"],
         orientation="horizontal",
     )
 if selected == "About":
@@ -31,7 +32,9 @@ if selected == "About":
                     # I am <span style='color: #ff4b4b;font-family:cursive;font-weight:1500;font-style: bold;'>RAVINDRA PANDEY</span> 
                     ## <span style="color:#f2bebe;">Data Science Postgraduate</span>
                     ##### <span style="color:#f2bebe;">From raw data to real solutions: Your trusted data science partner.</span> 
-                    """,unsafe_allow_html=True)
+                    ## Contact Me:
+                   <img src="assests/In-Blue-21.png" alt="Your App Logo" width="150">
+        """,unsafe_allow_html=True)
         with open("assests/ravindra_pandey_resume.pdf","rb") as f:
             resume=f.read()
         downloaded=st.download_button(
@@ -108,4 +111,4 @@ if selected == "About":
     st_lottie(json.load(open("assests/animation_looking_ahead.json", "r")))
 
 if selected == "Projects":
-    st.balloons()
+    projects.list_projects()
