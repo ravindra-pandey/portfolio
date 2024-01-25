@@ -3,8 +3,8 @@ from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 import json
 
-st.set_page_config(layout="wide", page_title="Home", page_icon=""'
-)
+st.set_page_config(layout="wide", page_title="Home", page_icon="🏡)
+
 
 def css_loader(url):
     with open(url, "r") as f:
@@ -90,7 +90,7 @@ if selected == "About":
             unsafe_allow_html=True,
         )
 
-        st_lottie(json.load(open("assests/animation_looking_ahead.json","r")))
+        st_lottie(json.load(open("assests/animation_looking_ahead.json", "r")))
 
 if selected == "Projects":
     st.balloons()
