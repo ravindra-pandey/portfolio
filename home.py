@@ -1,4 +1,3 @@
-import markdown
 import streamlit as st
 from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
@@ -36,36 +35,46 @@ if selected =="About":
                     # Education
                     ----------
                     ### MCA Data Science
-                        - Dev Sanskriti Vishwavidyalaya
-                        - 7.62 SGPA, 8.4 SGPA, 8.33 SGPA, _
-                        - 2022 - pusuing
+                        ☼ Dev Sanskriti Vishwavidyalaya
+                        ☼ 7.62 SGPA, 8.4 SGPA, 8.33 SGPA, _
+                        ☼ 2022 - pusuing
                         
                     ### BSC Applied Mathematics
-                        - Dev Sanskriti Vishwavidyalaya
-                        - 7.2 CGPA
-                        - 2019 - 2022
+                        ☼ Dev Sanskriti Vishwavidyalaya
+                        ☼ 7.2 CGPA
+                        ☼ 2019 - 2022
                     ### 12th
-                        - Inter Science College , Hazaribagh
-                        - 51.4%
-                        - 2017 - 2019
+                        ☼ Inter Science College , Hazaribagh
+                        ☼ 51.4%
+                        ☼ 2017 - 2019
                     ### 10th
-                        - St. Stephen School
-                        - 9.6 CGPA
-                        - 2017
+                        ☼ St. Stephen School
+                        ☼ 9.6 CGPA
+                        ☼ 2017
                      """ ,unsafe_allow_html=True)      
     with col4:
         st.markdown("""
                     # Work Experiences
                     -------------------
                     ### Machine Learning Mentor
-                        - National Institute of Electronics and Information Technology, Haridwar
-                        - Training JNV students in Tehri Garhwal on Python and ML.
-                        - Increased student engagement & practical knowledge: hands-on coding, 
+                    #### National Institute of Electronics and Information Technology, Haridwar
+                        ☼ Training JNV students in Tehri Garhwal on Python and ML.
+                        
+                        ☼ Increased student engagement & practical knowledge: hands-on coding, 
                         interactive notebooks, project simulations (data analysis, prediction models).
-                        - Bridged academic-real world gap: dynamically tailored curriculum.
-                        - Expanding to NLP & Deep Learning modules.
-                    ### Center of Artificial Intelligence & Research
-                     """,unsafe_allow_html=True)
+
+                        ☼ Bridged academic-real world gap: dynamically tailored curriculum.
+
+                        ☼ Expanding to NLP & Deep Learning modules.
+                    ### Computer Vision Intern
+                    #### Center of Artificial Intelligence & Research
+                        ☼ Engineered an automated Optical Character Recognition (OCR) application 
+                        utilizing Python and Google Vision API to extract data from legacy student forms,
+                        resulting in a 75% reduction in manual data entry time.
+
+                        ☼ Proactively resolved a critical text extraction issue, ensuring 97% accuracy and 
+                        completeness of data capture from diverse document formats.
+                        """,unsafe_allow_html=True)
         
         # st_lottie(json.load(open("assests/animation_looking_ahead.json","r")))
         
