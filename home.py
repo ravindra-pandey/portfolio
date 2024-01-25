@@ -13,11 +13,7 @@ def css_loader(url):
 
 css_loader("styles/style.css")
 
-
-def empty():
-    return " "
-
-
+st.title("#")
 with st.container():
     selected = option_menu(
         menu_title=None,
@@ -32,9 +28,9 @@ if selected == "About":
         st.write("##")
         st.write("##")
         st.markdown("""
-                    # I am <span style='color: #ff4b4b;font-family: "Fasthand",cursive;font-weight:1500;font-style: bold;'>RAVINDRA PANDEY</span> 
-                    ## <span style="color:#b23434;">Data Science Postgraduate</span>
-                    ##### <span style="color:#b23434;">From raw data to real solutions: Your trusted data science partner.</span> 
+                    # I am <span style='color: #ff4b4b;font-family:"Nothing You Could Do",cursive;font-weight:1500;font-style: bold;'>RAVINDRA PANDEY</span> 
+                    ## <span style="color:#f2bebe;">Data Science Postgraduate</span>
+                    ##### <span style="color:#f2bebe;">From raw data to real solutions: Your trusted data science partner.</span> 
                     """,unsafe_allow_html=True)
         with open("assests/ravindra_pandey_resume.pdf","rb") as f:
             resume=f.read()
