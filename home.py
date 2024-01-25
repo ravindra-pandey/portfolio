@@ -26,7 +26,7 @@ if selected =="About":
         st.header("I am RAVINDRA PANDEY")
         st.title("Data Science Postgraduate")
     with col2:
-        # st_lottie(json.load(open("assests/animation_laptop.json","r")))
+        st_lottie(json.load(open("assests/animation_laptop.json","r")))
         pass
     st.write("---")
     col3,col4 = st.columns(2)
