@@ -32,7 +32,7 @@ if selected =="About":
     col3,col4 = st.columns(2)
     with col3:
         st.markdown(f""" 
-                    # Education
+                    ## Education
                     ----------
                     ### MCA Data Science
                         ☼ Dev Sanskriti Vishwavidyalaya
@@ -54,10 +54,10 @@ if selected =="About":
                      """ ,unsafe_allow_html=True)      
     with col4:
         st.markdown("""
-                    # Work Experiences
+                    ## Work Experiences
                     -------------------
                     ### Machine Learning Mentor
-                    #### National Institute of Electronics and Information Technology, Haridwar
+                    ##### National Institute of Electronics and Information Technology, Haridwar
                         ☼ Training JNV students in Tehri Garhwal on Python and ML.
                         
                         ☼ Increased student engagement & practical knowledge: hands-on coding, 
@@ -67,7 +67,7 @@ if selected =="About":
 
                         ☼ Expanding to NLP & Deep Learning modules.
                     ### Computer Vision Intern
-                    #### Center of Artificial Intelligence & Research
+                    ##### Center of Artificial Intelligence & Research
                         ☼ Engineered an automated Optical Character Recognition (OCR) application 
                         utilizing Python and Google Vision API to extract data from legacy student forms,
                         resulting in a 75% reduction in manual data entry time.
