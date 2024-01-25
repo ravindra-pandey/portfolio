@@ -2,23 +2,31 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 import json
-st.set_page_config(layout="wide",page_title="Home",page_icon='🏠')
+
+st.set_page_config(layout="wide", page_title="Home", page_icon=""'
+)
 
 def css_loader(url):
-    with open(url,"r") as f:
-        st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
+    with open(url, "r") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
 css_loader("styles/style.css")
+
+
 def empty():
     return " "
+
+
 with st.container():
-    selected=option_menu(
+    selected = option_menu(
         menu_title=None,
-        options=["About","Projects","Contact"],
-        icons=["person","code-slash","chat"],
-        orientation='horizontal'
-        )
-if selected =="About":
-    col1,col2=st.columns(2)
+        options=["About", "Projects", "Contact"],
+        icons=["person", "code-slash", "chat"],
+        orientation="horizontal",
+    )
+if selected == "About":
+    col1, col2 = st.columns(2)
     with col1:
         st.write("##")
         st.write("##")
@@ -26,12 +34,13 @@ if selected =="About":
         st.header("I am RAVINDRA PANDEY")
         st.title("Data Science Postgraduate")
     with col2:
-        st_lottie(json.load(open("assests/animation_laptop.json","r")))
+        st_lottie(json.load(open("assests/animation_laptop.json", "r")))
         pass
     st.write("---")
-    col3,col4 = st.columns(2)
+    col3, col4 = st.columns(2)
     with col3:
-        st.markdown(f""" 
+        st.markdown(
+            f""" 
                     ## Education
                     ----------
                     ### MCA Data Science
@@ -51,9 +60,12 @@ if selected =="About":
                         ☼ St. Stephen School
                         ☼ 9.6 CGPA
                         ☼ 2017
-                     """ ,unsafe_allow_html=True)      
+                     """,
+            unsafe_allow_html=True,
+        )
     with col4:
-        st.markdown("""
+        st.markdown(
+            """
                     ## Work Experiences
                     -------------------
                     ### Machine Learning Mentor
@@ -74,9 +86,11 @@ if selected =="About":
 
                         ☼ Proactively resolved a critical text extraction issue, ensuring 97% accuracy and 
                         completeness of data capture from diverse document formats.
-                        """,unsafe_allow_html=True)
-        
-        # st_lottie(json.load(open("assests/animation_looking_ahead.json","r")))
-        
-if selected=="Projects":
+                        """,
+            unsafe_allow_html=True,
+        )
+
+        st_lottie(json.load(open("assests/animation_looking_ahead.json","r")))
+
+if selected == "Projects":
     st.balloons()
