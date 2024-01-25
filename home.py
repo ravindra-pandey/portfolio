@@ -28,7 +28,7 @@ if selected == "About":
         st.write("##")
         st.write("##")
         st.markdown("""
-                    # I am <span style='color: #ff4b4b;font-family:"Nothing You Could Do",cursive;font-weight:1500;font-style: bold;'>RAVINDRA PANDEY</span> 
+                    # I am <span style='color: #ff4b4b;font-family:cursive;font-weight:1500;font-style: bold;'>RAVINDRA PANDEY</span> 
                     ## <span style="color:#f2bebe;">Data Science Postgraduate</span>
                     ##### <span style="color:#f2bebe;">From raw data to real solutions: Your trusted data science partner.</span> 
                     """,unsafe_allow_html=True)
