@@ -1,1 +1,3 @@
-base="dark"
+[theme]
+base = "dark"
+backgroundColor = "#121212"
