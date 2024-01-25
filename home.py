@@ -3,7 +3,7 @@ from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 import json
 
-st.set_page_config(layout="wide", page_title="Home", page_icon="🏡)
+st.set_page_config(layout="wide", page_title="Home", page_icon="🏡")
 
 
 def css_loader(url):
