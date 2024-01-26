@@ -32,10 +32,12 @@ with st.container():
 if selected == "About":
     col1, col2 = st.columns(2)
     with col1:
+    # Code to initiate download will run when button is clicked
+
         st.write("##")
         st.markdown(
             f"""
-                    # I am <span style='color: #ff4b4b;font-family:cursive;font-weight:1500;font-style: bold;'>RAVINDRA PANDEY</span> 
+                    # I am <span style='color: #ef2929;font-family:cursive;font-weight:1500;font-style: bold;'>RAVINDRA PANDEY</span> 
                     ## <span style="color:#f2bebe;">Data Science Postgraduate</span>
                     ##### <span style="color:#f2bebe;">From raw data to real solutions: Your trusted data science partner.</span> 
                     #### Find Me here:
@@ -69,8 +71,6 @@ if selected == "About":
         )
         if downloaded:
             st.balloons()
-    # Code to initiate download will run when button is clicked
-
     with col2:
         st_lottie(
             json.load(open("assests/data_scientist.json", "r")),
@@ -80,11 +80,11 @@ if selected == "About":
     col3, col4 = st.columns(2)
     with col3:
         st.write("##")
-        st.write("##")
-        st.markdown("""# Education""", unsafe_allow_html=True)
+        st.markdown("""# <span style="color:#ef2929">Education</span>""", unsafe_allow_html=True)
     with col4:
         st.markdown(
-            """<iframe src="https://lottie.host/embed/b8e84b33-db28-40f8-912d-7d37b9357a3a/YNFoBS5CQX.json" style="width:8vw;hieght:6vw"></iframe>""",
+            
+            """<iframe src="https://lottie.host/embed/b8e84b33-db28-40f8-912d-7d37b9357a3a/YNFoBS5CQX.json" style="width:6vw;hieght:6vw;float:right"></iframe>""",
             unsafe_allow_html=True,
         )
     st.write("---")
@@ -92,12 +92,12 @@ if selected == "About":
     with col5:
         st.markdown(
             f""" 
-                    ### MCA Data Science
+                    ### <span style="color:#f2bebe">MCA Data Science</span>
                         ☼ Dev Sanskriti Vishwavidyalaya
                         ☼ 7.62 SGPA, 8.4 SGPA, 8.33 SGPA, _
                         ☼ 2022 - pusuing
                         
-                    ### BSC Applied Mathematics
+                    ### <span style="color:#f2bebe">BSC Applied Mathematics</span>
                         ☼ Dev Sanskriti Vishwavidyalaya
                         ☼ 7.2 CGPA
                         ☼ 2019 - 2022
@@ -107,11 +107,11 @@ if selected == "About":
     with col6:
         st.markdown(
             f""" 
-                    ### 12th
+                    ### <span style="color:#f2bebe">12th</span>
                         ☼ Inter Science College , Hazaribagh
                         ☼ 51.4%
                         ☼ 2017 - 2019
-                    ### 10th
+                    ### <span style="color:#f2bebe">10th</span>
                         ☼ St. Stephen School
                         ☼ 9.6 CGPA
                         ☼ 2017
@@ -124,19 +124,19 @@ if selected == "About":
         st.write("##")
         st.markdown(
             """
-            ## Work Experiences
-        """
+            ## <span style="color:#ef2929;">Work Experiences</span>
+        """,unsafe_allow_html=True
         )
     with col8:
         st.markdown(
-            """<iframe src="https://lottie.host/embed/85eaad1e-f322-43b5-b62f-059773c66219/w4LZWqelTf.json"></iframe>""",
+            """<iframe src="https://lottie.host/embed/85eaad1e-f322-43b5-b62f-059773c66219/w4LZWqelTf.json" style="float:right;"></iframe>""",
             unsafe_allow_html=True,
         )
     st.write("----")
     st.markdown(
         """
-        ### Machine Learning Mentor
-        ##### National Institute of Electronics and Information Technology, Haridwar
+        ### <span style="color:#f2bebe">Machine Learning Mentor</span>  
+        ##### <div class="container"><div>National Institute of Electronics and Information Technology, Haridwar</div> <div><span style="color:#f2bebe">Jan 2024-Ongoing</span><div></div>
             ☼ Training JNV students in Tehri Garhwal on Python and ML.
             
             ☼ Increased student engagement & practical knowledge: hands-on coding, 
@@ -145,8 +145,8 @@ if selected == "About":
             ☼ Bridged academic-real world gap: dynamically tailored curriculum.
 
             ☼ Expanding to NLP & Deep Learning modules.
-        ### Computer Vision Intern
-        ##### Center of Artificial Intelligence & Research
+        ### <span style="color:#f2bebe">Computer Vision Intern</span> 
+        ##### <div class="container"><div>Center of Artificial Intelligence & Research</div> <div><span style="color:#f2bebe">May-Aug 2023</span><div></div>
             ☼ Engineered an automated Optical Character Recognition (OCR) application 
             utilizing Python and Google Vision API to extract data from legacy student forms,
             resulting in a 75% reduction in manual data entry time.
