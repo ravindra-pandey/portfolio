@@ -77,16 +77,8 @@ if selected == "About":
             key="animation_container",
         )
 
-    col3, col4 = st.columns(2)
-    with col3:
-        st.write("##")
-        st.markdown("""# <span style="color:#ef2929">Education</span>""", unsafe_allow_html=True)
-    with col4:
-        st.markdown(
-            
-            """<iframe src="https://lottie.host/embed/b8e84b33-db28-40f8-912d-7d37b9357a3a/YNFoBS5CQX.json" style="width:6vw;hieght:6vw;float:right"></iframe>""",
-            unsafe_allow_html=True,
-        )
+    st.write("##")
+    st.markdown("""# <div class="container_head"><div><span style="color:#ef2929;">Education</span></div><div><iframe src="https://lottie.host/embed/b8e84b33-db28-40f8-912d-7d37b9357a3a/YNFoBS5CQX.json" style="width:6vw;hieght:6vw;float:right"></iframe></div></div>""", unsafe_allow_html=True)
     st.write("---")
     col5, col6 = st.columns(2)
     with col5:
@@ -122,14 +114,14 @@ if selected == "About":
     st.write("##")
     st.markdown(
         """
-        ## <span style="color:#ef2929;">Work Experiences</span><iframe src="https://lottie.host/embed/85eaad1e-f322-43b5-b62f-059773c66219/w4LZWqelTf.json" style="float:right;"></iframe>
+        ## <div class="container_head"><div><span style="color:#ef2929;">Work Experiences</span></div><div><iframe src="https://lottie.host/embed/85eaad1e-f322-43b5-b62f-059773c66219/w4LZWqelTf.json" style="float:right;"></iframe></div></div>
     """,unsafe_allow_html=True
     )
     st.write("----")
     st.markdown(
         """
         ### <span style="color:#f2bebe">Machine Learning Mentor</span>  
-        ##### <div class="container"><div>National Institute of Electronics and Information Technology, Haridwar</div> <div><span style="color:#f2bebe">Jan 2024-Ongoing</span><div></div>
+        ##### <div class="container_desc"><div>National Institute of Electronics and Information Technology, Haridwar</div> <div><span style="color:#f2bebe">Jan 2024-Ongoing</span><div></div>
             ☼ Training JNV students in Tehri Garhwal on Python and ML.
             
             ☼ Increased student engagement & practical knowledge: hands-on coding, 
@@ -139,7 +131,7 @@ if selected == "About":
 
             ☼ Expanding to NLP & Deep Learning modules.
         ### <span style="color:#f2bebe">Computer Vision Intern</span> 
-        ##### <div class="container"><div>Center of Artificial Intelligence & Research</div> <div><span style="color:#f2bebe">May-Aug 2023</span><div></div>
+        ##### <div class="container_desc"><div>Center of Artificial Intelligence & Research</div> <div><span style="color:#f2bebe">May-Aug 2023</span><div></div>
             ☼ Engineered an automated Optical Character Recognition (OCR) application 
             utilizing Python and Google Vision API to extract data from legacy student forms,
             resulting in a 75% reduction in manual data entry time.

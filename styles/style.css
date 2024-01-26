@@ -49,8 +49,18 @@ border: none;
     cursor: pointer;
 }
 
-.container{
+.container_head{
     position: block;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 7vw;
+    margin: 0;
+    padding: 0;
+}
+.container_desc{
+    position: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
