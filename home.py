@@ -11,9 +11,15 @@ def css_loader(url):
     with open(url, "r") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+javascript = """
+<script type="text/javascript">
+document.getElementById('linkedin-animation').onclick = function() {
+    window.open('https://www.linkedin.com/in/ravindra-pandey-989a75195', '_blank');
+};
+</script>
+"""
 
 css_loader("styles/style.css")
-st.markdown("""<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">""",unsafe_allow_html=True)
 st.title("#")
 with st.container():
     selected = option_menu(
@@ -26,15 +32,29 @@ if selected == "About":
     col1, col2 = st.columns(2)
     with col1:
         st.write("##")
-        st.write("##")
-        st.write("##")
-        st.markdown("""
+        st.markdown(f"""
                     # I am <span style='color: #ff4b4b;font-family:cursive;font-weight:1500;font-style: bold;'>RAVINDRA PANDEY</span> 
                     ## <span style="color:#f2bebe;">Data Science Postgraduate</span>
                     ##### <span style="color:#f2bebe;">From raw data to real solutions: Your trusted data science partner.</span> 
-                    ## Contact Me:
-                   ![Your App Logo](assests/In-Blue-21.png)
-        """,unsafe_allow_html=True)
+                    #### Find Me here:
+                    <div style="text-decoration:none">ravindra.kr.py@gmail.com</div>
+                    <div class="contact_container">
+                    <div class="lottie-container">
+                    <a href="https://www.linkedin.com/in/ravindra-pandey-989a75195">
+                        <button class="lottie-button"></button>
+                        <iframe class="lottie-iframe" src="https://lottie.host/embed/2cab57e3-dcf2-4db2-93ec-e46f198ab45c/KeNYZUdMti.json"></iframe>
+                    </a>
+                    </div>
+                    <div class="lottie-container">
+                    <a href="https://www.github.com/ravindra-pandey">
+                        <button class="lottie-button"></button>
+                        <iframe class="lottie-iframe" src="https://lottie.host/embed/e91f663b-67a3-4135-ab98-b0218738f50d/FJHs1stK9R.json"></iframe>
+                    </a>
+                    </div>
+                    </div>
+                    
+                    """,unsafe_allow_html=True)
+        
         with open("assests/ravindra_pandey_resume.pdf","rb") as f:
             resume=f.read()
         downloaded=st.download_button(
@@ -50,11 +70,19 @@ if selected == "About":
     with col2:
         st_lottie(json.load(open("assests/data_scientist.json", "r")),key="animation_container")
         pass
-    st.write("---")
-    st.markdown("""# Education""",unsafe_allow_html=True)
-    st.write("---")
-    col3, col4 = st.columns(2)
+    st.write("##")
+    st.write("##")
+    st.write("##")
+    col3,col4=st.columns(2)
     with col3:
+        st.write("##")
+        st.write("##")
+        st.markdown("""# Education""",unsafe_allow_html=True)
+    with col4:
+        st.markdown("""<iframe src="https://lottie.host/embed/b8e84b33-db28-40f8-912d-7d37b9357a3a/YNFoBS5CQX.json" style="width:8vw;hieght:6vw"></iframe>""",unsafe_allow_html=True)
+    st.write("---")
+    col5, col6 = st.columns(2)
+    with col5:
         st.markdown(
             f""" 
                     ### MCA Data Science
@@ -67,7 +95,7 @@ if selected == "About":
                         ☼ 7.2 CGPA
                         ☼ 2019 - 2022
             """,unsafe_allow_html=True)
-    with col4:
+    with col6:
         st.markdown(
             f""" 
                     ### 12th
@@ -81,34 +109,42 @@ if selected == "About":
                      """,
             unsafe_allow_html=True,
         )
-    
+    col7,col8=st.columns(2)
+    with col7:
+        st.write("##")
+        st.write("##")
+        st.markdown(
+        """
+            ## Work Experiences
+        """)
+    with col8:
+        st.markdown("""<iframe src="https://lottie.host/embed/85eaad1e-f322-43b5-b62f-059773c66219/w4LZWqelTf.json"></iframe>""",unsafe_allow_html=True)
+    st.write("----")
     st.markdown(
     """
-            ## Work Experiences
-            -------------------
-            ### Machine Learning Mentor
-            ##### National Institute of Electronics and Information Technology, Haridwar
-                ☼ Training JNV students in Tehri Garhwal on Python and ML.
-                
-                ☼ Increased student engagement & practical knowledge: hands-on coding, 
-                interactive notebooks, project simulations (data analysis, prediction models).
+        ### Machine Learning Mentor
+        ##### National Institute of Electronics and Information Technology, Haridwar
+            ☼ Training JNV students in Tehri Garhwal on Python and ML.
+            
+            ☼ Increased student engagement & practical knowledge: hands-on coding, 
+            interactive notebooks, project simulations (data analysis, prediction models).
 
-                ☼ Bridged academic-real world gap: dynamically tailored curriculum.
+            ☼ Bridged academic-real world gap: dynamically tailored curriculum.
 
-                ☼ Expanding to NLP & Deep Learning modules.
-            ### Computer Vision Intern
-            ##### Center of Artificial Intelligence & Research
-                ☼ Engineered an automated Optical Character Recognition (OCR) application 
-                utilizing Python and Google Vision API to extract data from legacy student forms,
-                resulting in a 75% reduction in manual data entry time.
+            ☼ Expanding to NLP & Deep Learning modules.
+        ### Computer Vision Intern
+        ##### Center of Artificial Intelligence & Research
+            ☼ Engineered an automated Optical Character Recognition (OCR) application 
+            utilizing Python and Google Vision API to extract data from legacy student forms,
+            resulting in a 75% reduction in manual data entry time.
 
-                ☼ Proactively resolved a critical text extraction issue, ensuring 97% accuracy and 
-                completeness of data capture from diverse document formats.
-                """,
+            ☼ Proactively resolved a critical text extraction issue, ensuring 97% accuracy and 
+            completeness of data capture from diverse document formats.
+            """,
     unsafe_allow_html=True,
     )
 
-    st_lottie(json.load(open("assests/animation_looking_ahead.json", "r")))
-
 if selected == "Projects":
     projects.list_projects()
+
+st.components.v1.html(javascript, height=0, width=0)

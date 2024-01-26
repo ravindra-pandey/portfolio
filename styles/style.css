@@ -10,19 +10,42 @@
 .st-emotion-cache-keje6w > div > div > div > iframe {
     display: block; /* Ensure block-level display for centering */
     margin: 0 auto; /* Center horizontally */
-    width: 35vw; /* Responsive width based on viewport width */
-    height: 40vw; /* Maintain aspect ratio with 1:2 width-to-height ratio */
+    width: 30vw; /* Responsive width based on viewport width */
+    height: 30vw; /* Maintain aspect ratio with 1:2 width-to-height ratio */
 }
-.st-emotion-cache-keje6w > div > div > div > iframe {
-    display: block; /* Ensure block-level display for centering */
-    margin: 0 auto; /* Center horizontally */
-    width: 35vw; /* Responsive width based on viewport width */
-    height: 40vw; /* Maintain aspect ratio with 1:2 width-to-height ratio */
+.contact_container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 10vw; /* Adjust the width as needed */
+    height: 5vw; /* Adjust the height as needed */
 }
-.linkedin-logo {
-    background-image: url("assests/in-Blue-21.png"); /* Base64-encoded SVG data */
-    width: 50px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
-    background-repeat: no-repeat;
-    display: inline-block;
-  }
+
+.lottie-container {
+position: relative;
+width: 5vw; /* Adjust the width as needed */
+height: 5vw; /* Adjust the height as needed */
+}
+
+.lottie-iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 4vw;
+height: 4vw;
+z-index: 1;
+border: none;
+}
+
+.lottie-button {
+position: absolute;
+top: 0;
+left: 0;
+width: 5vw;
+height: 5vw;
+z-index: 2;
+background: transparent;
+border: none;
+cursor: pointer;
+}
+
