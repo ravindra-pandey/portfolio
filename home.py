@@ -34,7 +34,7 @@ if selected == "About":
                     ## <span style="color:#f2bebe;">Data Science Postgraduate</span>
                     ##### <span style="color:#f2bebe;">From raw data to real solutions: Your trusted data science partner.</span> 
                     ## Contact Me:
-                   ![Your App Logo](./assests/In-Blue-21.png)
+                   ![Your App Logo](assests/In-Blue-21.png)
         """,unsafe_allow_html=True)
         with open("assests/ravindra_pandey_resume.pdf","rb") as f:
             resume=f.read()
