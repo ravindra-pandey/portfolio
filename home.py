@@ -1,4 +1,5 @@
 import streamlit as st
+from sympy import true
 from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 import json
@@ -13,7 +14,7 @@ def css_loader(url):
 
 
 css_loader("styles/style.css")
-
+st.markdown("""<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">""",unsafe_allow_html=True)
 st.title("#")
 with st.container():
     selected = option_menu(
@@ -33,7 +34,7 @@ if selected == "About":
                     ## <span style="color:#f2bebe;">Data Science Postgraduate</span>
                     ##### <span style="color:#f2bebe;">From raw data to real solutions: Your trusted data science partner.</span> 
                     ## Contact Me:
-                   <img src="assests/In-Blue-21.png" alt="Your App Logo" width="150">
+                   ![Your App Logo](./assests/In-Blue-21.png)
         """,unsafe_allow_html=True)
         with open("assests/ravindra_pandey_resume.pdf","rb") as f:
             resume=f.read()
