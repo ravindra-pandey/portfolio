@@ -11,6 +11,7 @@ def css_loader(url):
     with open(url, "r") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+
 javascript = """
 <script type="text/javascript">
 document.getElementById('linkedin-animation').onclick = function() {
@@ -32,7 +33,8 @@ if selected == "About":
     col1, col2 = st.columns(2)
     with col1:
         st.write("##")
-        st.markdown(f"""
+        st.markdown(
+            f"""
                     # I am <span style='color: #ff4b4b;font-family:cursive;font-weight:1500;font-style: bold;'>RAVINDRA PANDEY</span> 
                     ## <span style="color:#f2bebe;">Data Science Postgraduate</span>
                     ##### <span style="color:#f2bebe;">From raw data to real solutions: Your trusted data science partner.</span> 
@@ -53,33 +55,38 @@ if selected == "About":
                     </div>
                     </div>
                     
-                    """,unsafe_allow_html=True)
-        
-        with open("assests/ravindra_pandey_resume.pdf","rb") as f:
-            resume=f.read()
-        downloaded=st.download_button(
+                    """,
+            unsafe_allow_html=True,
+        )
+
+        with open("assests/ravindra_pandey_resume.pdf", "rb") as f:
+            resume = f.read()
+        downloaded = st.download_button(
             label="My Resume ",
             data=resume,  # Use pdf_data if available, otherwise read directly from file
             file_name="ravindra_resume.pdf",  # Adjust filename as needed
             mime="application/pdf",
-            )
+        )
         if downloaded:
             st.balloons()
     # Code to initiate download will run when button is clicked
 
     with col2:
-        st_lottie(json.load(open("assests/data_scientist.json", "r")),key="animation_container")
-        pass
-    st.write("##")
-    st.write("##")
-    st.write("##")
-    col3,col4=st.columns(2)
+        st_lottie(
+            json.load(open("assests/data_scientist.json", "r")),
+            key="animation_container",
+        )
+
+    col3, col4 = st.columns(2)
     with col3:
         st.write("##")
         st.write("##")
-        st.markdown("""# Education""",unsafe_allow_html=True)
+        st.markdown("""# Education""", unsafe_allow_html=True)
     with col4:
-        st.markdown("""<iframe src="https://lottie.host/embed/b8e84b33-db28-40f8-912d-7d37b9357a3a/YNFoBS5CQX.json" style="width:8vw;hieght:6vw"></iframe>""",unsafe_allow_html=True)
+        st.markdown(
+            """<iframe src="https://lottie.host/embed/b8e84b33-db28-40f8-912d-7d37b9357a3a/YNFoBS5CQX.json" style="width:8vw;hieght:6vw"></iframe>""",
+            unsafe_allow_html=True,
+        )
     st.write("---")
     col5, col6 = st.columns(2)
     with col5:
@@ -94,7 +101,9 @@ if selected == "About":
                         ☼ Dev Sanskriti Vishwavidyalaya
                         ☼ 7.2 CGPA
                         ☼ 2019 - 2022
-            """,unsafe_allow_html=True)
+            """,
+            unsafe_allow_html=True,
+        )
     with col6:
         st.markdown(
             f""" 
@@ -109,19 +118,23 @@ if selected == "About":
                      """,
             unsafe_allow_html=True,
         )
-    col7,col8=st.columns(2)
+    col7, col8 = st.columns(2)
     with col7:
         st.write("##")
         st.write("##")
         st.markdown(
-        """
+            """
             ## Work Experiences
-        """)
+        """
+        )
     with col8:
-        st.markdown("""<iframe src="https://lottie.host/embed/85eaad1e-f322-43b5-b62f-059773c66219/w4LZWqelTf.json"></iframe>""",unsafe_allow_html=True)
+        st.markdown(
+            """<iframe src="https://lottie.host/embed/85eaad1e-f322-43b5-b62f-059773c66219/w4LZWqelTf.json"></iframe>""",
+            unsafe_allow_html=True,
+        )
     st.write("----")
     st.markdown(
-    """
+        """
         ### Machine Learning Mentor
         ##### National Institute of Electronics and Information Technology, Haridwar
             ☼ Training JNV students in Tehri Garhwal on Python and ML.
@@ -141,7 +154,7 @@ if selected == "About":
             ☼ Proactively resolved a critical text extraction issue, ensuring 97% accuracy and 
             completeness of data capture from diverse document formats.
             """,
-    unsafe_allow_html=True,
+        unsafe_allow_html=True,
     )
 
 if selected == "Projects":
