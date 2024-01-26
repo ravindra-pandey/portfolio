@@ -118,20 +118,13 @@ if selected == "About":
                      """,
             unsafe_allow_html=True,
         )
-    col7, col8 = st.columns(2)
-    with col7:
-        st.write("##")
-        st.write("##")
-        st.markdown(
-            """
-            ## <span style="color:#ef2929;">Work Experiences</span>
-        """,unsafe_allow_html=True
-        )
-    with col8:
-        st.markdown(
-            """<iframe src="https://lottie.host/embed/85eaad1e-f322-43b5-b62f-059773c66219/w4LZWqelTf.json" style="float:right;"></iframe>""",
-            unsafe_allow_html=True,
-        )
+    st.write("##")
+    st.write("##")
+    st.markdown(
+        """
+        ## <span style="color:#ef2929;">Work Experiences</span><iframe src="https://lottie.host/embed/85eaad1e-f322-43b5-b62f-059773c66219/w4LZWqelTf.json" style="float:right;"></iframe>
+    """,unsafe_allow_html=True
+    )
     st.write("----")
     st.markdown(
         """
